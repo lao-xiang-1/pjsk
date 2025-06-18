@@ -16,7 +16,10 @@ def image_click(src, region=None, confidence=0.9):
             location = pyautogui.locateCenterOnScreen(src, region=region, confidence=confidence)
             loc_x, loc_y = location
             pyautogui.moveTo(loc_x, loc_y)
-            sleep(0.3)
+            if src == 'image/sandian.png':
+                sleep(0.7)
+            else:
+                sleep(0.3)
             pyautogui.click()
             print(f'已点击{src}')
         except Exception as e:

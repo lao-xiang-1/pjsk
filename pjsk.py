@@ -32,13 +32,13 @@ while running:
     i_r.image_click('image/jiesuo.png', region)
     sleep(0.3)
     i_r.image_click('image/wuyuyin.png', region)
-    sleep(2)
+    sleep(2.5)
     i_r.image_click('image/sandian.png', region)
     sleep(0.3)
     i_r.image_click('image/tiaoguo.png', region)
     sleep(0.3)
     i_r.image_click('image/quedingtiaoguo.png', region)
-    sleep(0.3)
+    sleep(1)
     pyautogui.click()
     sleep(0.3)
     pyautogui.click()
@@ -80,5 +80,5 @@ while running:
 
     # 返回
     i_r.image_click('image/fanhui.png', region)
-    sleep(0.3)
+    sleep(1)
     pyautogui.moveTo(center_x, center_y)
