@@ -3,16 +3,18 @@ import pyautogui
 from time import sleep
 import winsound
 import win32gui
-import image_recognition as i_r
+import image_recognition as im
 
 keyboard.wait('1') # 等待按下1
 running = True
 winsound.Beep(800, 200)
 
+i_r = im.Image()
+
 # 获取鼠标位置
 center_x, center_y = pyautogui.position()
 # 获取窗口尺寸
-hwnd = win32gui.FindWindow(None, 'V2364A')
+hwnd = win32gui.GetForegroundWindow() # 获取当前置顶窗口的句柄
 if hwnd == 0:
     print('窗口不存在！')
     exit()
